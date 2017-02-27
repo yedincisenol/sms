@@ -1,4 +1,4 @@
-# sms
+# PHP Sms Client
 
 Send Sms With Php and Any sms provider
 
