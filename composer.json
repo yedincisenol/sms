@@ -1,0 +1,21 @@
+{
+    "name": "yedincisenol/sms",
+    "description": "Send sms with Php",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ibrahim S. Orencik",
+            "email": "o@yedincisenol.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "guzzlehttp/guzzle": "^6.2"
+    },
+    "autoload": {
+        "psr-4" : {
+            "yedincisenol\\Sms\\" : "src"
+        }
+    }
+}
