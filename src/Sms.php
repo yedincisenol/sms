@@ -37,6 +37,11 @@ class Sms
         }
     }
 
+    /**
+     * @param $message Message
+     * @param $numbers Numbers Array
+     * @param $header SMS HEADER
+     */
     public function send($message, $numbers, $header)
     {
         $this->driver->send($message, $numbers, $header);
