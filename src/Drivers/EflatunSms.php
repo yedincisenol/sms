@@ -19,7 +19,7 @@ class EflatunSms extends Sms
                 "password"  =>  $this->config['password'],
                 "alfa"      =>  $header,
                 "message"   =>  $message,
-                "numbers"   =>  implode("|", $numbers)
+                "numbers"   =>  implode(",", $numbers)
             )));
 
         $this->checkResponse($response);
