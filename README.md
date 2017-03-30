@@ -1,5 +1,7 @@
 # PHP Sms Client
 
+![Coverage Status](https://styleci.io/repos/83325443/shield)
+
 Send Sms With Php and Any sms provider
 
 ## Added Providers For Now
