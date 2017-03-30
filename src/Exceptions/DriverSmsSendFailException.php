@@ -2,11 +2,10 @@
 
 namespace yedincisenol\Sms\Exceptions;
 
-class DriverSmsSendFailException extends \Exception {
-
-    public function __construct($message = "", $code = 0, Exception $previous = null)
+class DriverSmsSendFailException extends \Exception
+{
+    public function __construct($message = '', $code = 0, Exception $previous = null)
     {
         parent::__construct($message, $code, $previous);
     }
-
 }

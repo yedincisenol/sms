@@ -1,13 +1,13 @@
 <?php
 
-include "vendor/autoload.php";
+include 'vendor/autoload.php';
 
 /**
- * Example client for send sms with Eflatun Sms provider
+ * Example client for send sms with Eflatun Sms provider.
  */
-$smsProvider = new yedincisenol\Sms\Sms("EflatunSms", array(
-    "username"  => "eflatun_sms_username",
-    "password"  => "eflatun_sms_password"
-));
+$smsProvider = new yedincisenol\Sms\Sms('EflatunSms', [
+    'username'  => 'eflatun_sms_username',
+    'password'  => 'eflatun_sms_password',
+]);
 
-echo $smsProvider->send("Selam", array(5557777777), "YENICO");
+echo $smsProvider->send('Selam', [5557777777], 'YENICO');
