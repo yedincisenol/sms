@@ -1,5 +1,5 @@
 <?php
 
-return array(
-    'default_driver'    =>  'EflatunSms'
-);
+return [
+    'default_driver'    => 'EflatunSms',
+];
