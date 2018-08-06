@@ -6,7 +6,6 @@ use yedincisenol\Sms\Exceptions\DriverConfigurationException;
 
 abstract class Sms
 {
-
     protected $config;
     protected $httpClient;
     protected $requiredConfig;
@@ -25,17 +24,17 @@ abstract class Sms
      * @param $message
      * @param $numbers
      * @param $header
+     *
      * @return mixed
      */
     abstract function send($message, $numbers, $header);
 
-    protected function validateConfig(){
+    protected function validateConfig()
+    {
 
-        foreach ($this->requiredConfig as $required)
-        {
-            if(!key_exists($required, $this->config))
-            {
-                throw new DriverConfigurationException($required. " config required for driver:" . get_class($this), 402);
+        foreach ($this->requiredConfig as $required) {
+            if (!key_exists($required, $this->config)) {
+                throw new DriverConfigurationException($required . " config required for driver:" . get_class($this), 402);
             }
         }
     }
