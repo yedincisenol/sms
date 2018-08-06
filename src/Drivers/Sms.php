@@ -14,7 +14,8 @@ abstract class Sms
     function __construct($driver, $config){
 
         $this->httpClient   =   new \GuzzleHttp\Client();
-        $this->config       =   require_once __DIR__ . '/../Config/' . $driver. ".php";
+        $defaultConfig      =   require(__DIR__ . '/../Config/Sms.php');
+        $this->config       =   @$defaultConfig[$driver];
         $this->config       =   array_merge($this->config, $config);
 
         $this->validateConfig();
@@ -32,7 +33,6 @@ abstract class Sms
 
         foreach ($this->requiredConfig as $required)
         {
-
             if(!key_exists($required, $this->config))
             {
                 throw new DriverConfigurationException($required. " config required for driver:" . get_class($this), 402);

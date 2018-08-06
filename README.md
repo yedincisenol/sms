@@ -1,9 +1,15 @@
 # PHP Sms Client
 
-Send Sms With Php and Any sms provider
+[![Travis](https://img.shields.io/travis/yedincisenol/sms.svg?style=for-the-badge)]()
+[![Packagist](https://img.shields.io/packagist/dt/yedincisenol/sms.svg?style=for-the-badge)]()
+[![Packagist](https://img.shields.io/packagist/v/yedincisenol/sms.svg?style=for-the-badge)]()
+[![Packagist](https://img.shields.io/packagist/l/yedincisenol/sms?style=for-the-badge)]()
+
+Send Sms With Php & Laravel and Any sms provider
 
 ## Added Providers For Now
 - Eflatun Sms
+- Mutlucell
 
 ## Example Usage
 
@@ -23,10 +29,28 @@ $smsProvider = new yedincisenol\Sms\Sms("EflatunSms", array(
 echo $smsProvider->send("Selam", array(5557777777), "YENICO");
 
 ```
+php artisan vendor:publish --tag=sms
+```
+
+For befor Laravel 5.6
+
+in `config/app.php`
+`` 
+providers' => [
+	...
+    yedincisenol\Sms\LaravelServiceProvider::class
+],
+``
+
 
 ## How to install
 
 ```composer require yedincisenol/sms ```
+
+## Config
+
+You can fill `Sms` config file or pass config on initialize Sms object
+
 
 ## Add new Providers
 
@@ -34,7 +58,7 @@ You can fork the repo and add new providers what you need.
 
 ### How?
 
-- Add new file in Config folder same of Driver name
+- Add new file in Config key in Config/Sms.php file, same of Driver name
 - Add new Driver in Drivers folder
  - Extend new Driver from Sms abstract class
  - Add Required config parameters array  and fill it

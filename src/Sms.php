@@ -13,13 +13,9 @@ class Sms
 
     public function __construct($driver = false, $config = Array())
     {
-
         $this->config   =   require __DIR__ . "/Config/Sms.php";
-
         if($driver == false){
-
             $driver = $this->config['default_driver'];
-
         }
 
         try

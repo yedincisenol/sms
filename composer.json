@@ -3,6 +3,7 @@
     "description": "Send sms with Php",
     "type": "library",
     "license": "MIT",
+    "version": "1.2.0",
     "authors": [
         {
             "name": "Ibrahim S. Orencik",
@@ -10,12 +11,19 @@
         }
     ],
     "require": {
-        "php": ">=5.3.0",
+        "php": ">=7.0",
         "guzzlehttp/guzzle": "^6.2"
     },
     "autoload": {
         "psr-4" : {
             "yedincisenol\\Sms\\" : "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "yedincisenol\\Sms\\Sms"
+            ]
         }
     }
 }
