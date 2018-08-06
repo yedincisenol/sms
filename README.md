@@ -29,18 +29,6 @@ $smsProvider = new yedincisenol\Sms\Sms("EflatunSms", array(
 echo $smsProvider->send("Selam", array(5557777777), "YENICO");
 
 ```
-php artisan vendor:publish --tag=sms
-```
-
-For befor Laravel 5.6
-
-in `config/app.php`
-`` 
-providers' => [
-	...
-    yedincisenol\Sms\LaravelServiceProvider::class
-],
-``
 
 
 ## How to install
@@ -50,6 +38,22 @@ providers' => [
 ## Config
 
 You can fill `Sms` config file or pass config on initialize Sms object
+
+### For Laravel
+
+```
+php artisan vendor:publish --tag=sms
+```
+
+For before Laravel 5.6
+
+in `config/app.php`
+`` 
+providers' => [
+	...
+    yedincisenol\Sms\LaravelServiceProvider::class
+],
+``
 
 
 ## Add new Providers

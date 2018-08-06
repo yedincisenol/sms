@@ -12,11 +12,17 @@ class Sms
 
     public function __construct($driver = false, $config = [])
     {
-        $this->config = require __DIR__.'/Config/Sms.php';
+        $this->config = require_once __DIR__.'/Config/Sms.php';
 
         if ($driver == false) {
             $driver = $this->config['default_driver'];
         }
+
+        $this->driver($driver, $config);
+    }
+
+    public function driver($driver, $config)
+    {
 
         try {
             $driverClass = "\\yedincisenol\\Sms\\Drivers\\{$driver}";
