@@ -6,16 +6,16 @@ use yedincisenol\Sms\Exceptions\DriverSmsSendFailException;
 
 class Mutlucell extends Sms
 {
-
     protected $requiredConfig = ['username', 'password'];
 
     /**
      * @param $message
      * @param $numbers
      * @param $header
+     *
      * @return mixed
      */
-    function send($message, $numbers, $header)
+    public function send($message, $numbers, $header)
     {
         $xml = new \SimpleXMLElement('<?xml version="1.0" encoding="utf-8"?><smspack></smspack>');
         $xml->addAttribute('ka', $this->config['username']);
@@ -27,10 +27,10 @@ class Mutlucell extends Sms
         $child->addChild('nums', implode(',', $numbers));
 
         $response = $this->httpClient->request('POST', $this->config['request_endpoint'], [
-            'headers'   =>  [
-                'content_type'  =>  'text/xml'
+            'headers'   => [
+                'content_type'  => 'text/xml',
             ],
-            'body'  =>  $xml->asXML()
+            'body'  => $xml->asXML(),
         ]);
 
         return $this->checkResponse($response);
