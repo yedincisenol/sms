@@ -62,11 +62,11 @@ You can fork the repo and add new providers what you need.
 
 ### How?
 
-- Add new file in Config key in Config/Sms.php file, same of Driver name
+- Add new Config key in `Config/Sms.php` file as same of Driver name
 - Add new Driver in Drivers folder
  - Extend new Driver from Sms abstract class
  - Add Required config parameters array  and fill it
- - Add send method  and fill it
+ - Add send method and fill it
  - Add checkResponse method and fill it
  
  
