@@ -10,12 +10,12 @@ abstract class Sms
     protected $httpClient;
     protected $requiredConfig;
 
-    function __construct($driver, $config){
-
-        $this->httpClient   =   new \GuzzleHttp\Client();
-        $defaultConfig      =   require(__DIR__ . '/../Config/Sms.php');
-        $this->config       =   @$defaultConfig[$driver];
-        $this->config       =   array_merge($this->config, $config);
+    public function __construct($driver, $config)
+    {
+        $this->httpClient = new \GuzzleHttp\Client();
+        $defaultConfig = require __DIR__.'/../Config/Sms.php';
+        $this->config = @$defaultConfig[$driver];
+        $this->config = array_merge($this->config, $config);
 
         $this->validateConfig();
     }
@@ -27,14 +27,13 @@ abstract class Sms
      *
      * @return mixed
      */
-    abstract function send($message, $numbers, $header);
+    abstract public function send($message, $numbers, $header);
 
     protected function validateConfig()
     {
-
         foreach ($this->requiredConfig as $required) {
-            if (!key_exists($required, $this->config)) {
-                throw new DriverConfigurationException($required . " config required for driver:" . get_class($this), 402);
+            if (!array_key_exists($required, $this->config)) {
+                throw new DriverConfigurationException($required.' config required for driver:'.get_class($this), 402);
             }
         }
     }

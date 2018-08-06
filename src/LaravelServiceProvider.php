@@ -6,7 +6,6 @@ use Illuminate\Support\ServiceProvider;
 
 class LaravelServiceProvider extends ServiceProvider
 {
-
     /**
      * Perform post-registration booting of services.
      *
@@ -26,7 +25,6 @@ class LaravelServiceProvider extends ServiceProvider
      */
     public function register()
     {
-
         $this->mergeConfigFrom(
             __DIR__.'/Config/Sms.php', 'sms'
         );

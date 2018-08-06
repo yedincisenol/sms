@@ -1,13 +1,13 @@
 <?php
 
-return array(
-    'default_driver'    =>  'EflatunSms',
-    'Mutlucell'        =>  [
-        'request_endpoint'  =>  'https://smsgw.mutlucell.com/smsgw-ws/sndblkex',
-        'username'          =>  'username',
-        'password'          =>  'password',
+return [
+    'default_driver'    => 'EflatunSms',
+    'Mutlucell'         => [
+        'request_endpoint'  => 'https://smsgw.mutlucell.com/smsgw-ws/sndblkex',
+        'username'          => 'username',
+        'password'          => 'password',
     ],
-    'EflatunSms'        =>  [
-        'request_endpoint' =>  'http://panel.eflatunsms.com/httpapi/Send_Sms.aspx'
-    ]
-);
+    'EflatunSms'        => [
+        'request_endpoint' => 'http://panel.eflatunsms.com/httpapi/Send_Sms.aspx',
+    ],
+];

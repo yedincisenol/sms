@@ -11,7 +11,6 @@ class Sms
 
     public function __construct($driver = false, $config = [])
     {
-
         if ($config === [] && function_exists('config')) {
             $smsConfig = config('sms');
         }
@@ -21,7 +20,7 @@ class Sms
         }
 
         if ($config === [] && function_exists('config')) {
-            $config = config('sms.' . $driver);
+            $config = config('sms.'.$driver);
         }
 
         $this->driver($driver, $config);
@@ -29,7 +28,6 @@ class Sms
 
     public function driver($driver, $config)
     {
-
         try {
             $driverClass = "\\yedincisenol\\Sms\\Drivers\\{$driver}";
             $this->driver = new $driverClass($driver, $config);
