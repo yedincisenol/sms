@@ -5,7 +5,7 @@ namespace App\Providers;
 use yedincisenol\Sms\Sms;
 use Illuminate\Support\ServiceProvider;
 
-class RiakServiceProvider extends ServiceProvider
+class LaravelServiceProvider extends ServiceProvider
 {
 
     /**
