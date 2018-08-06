@@ -1,8 +1,7 @@
 <?php
 
-namespace App\Providers;
+namespace yedincisenol\Sms;
 
-use yedincisenol\Sms\Sms;
 use Illuminate\Support\ServiceProvider;
 
 class LaravelServiceProvider extends ServiceProvider
