@@ -8,14 +8,20 @@ use yedincisenol\Sms\Exceptions\DriverNotFoundException;
 class Sms
 {
     private $driver;
-    private $config;
 
     public function __construct($driver = false, $config = [])
     {
-        $this->config = require_once __DIR__.'/Config/Sms.php';
+
+        if ($config === [] && function_exists('config')) {
+            $smsConfig = config('sms');
+        }
 
         if ($driver == false) {
-            $driver = $this->config['default_driver'];
+            $driver = $smsConfig['default_driver'];
+        }
+
+        if ($config === [] && function_exists('config')) {
+            $config = config('sms.' . $driver);
         }
 
         $this->driver($driver, $config);

@@ -32,7 +32,7 @@ class LaravelServiceProvider extends ServiceProvider
         );
 
         $this->app->singleton(Sms::class, function ($app) {
-            return new Sms(config('sms.default_driver'), config('sms'));
+            return new Sms();
         });
     }
 }
