@@ -28,7 +28,7 @@ class LaravelServiceProvider extends ServiceProvider
     {
 
         $this->mergeConfigFrom(
-            __DIR__.'Config/Sms.php', 'sms'
+            __DIR__.'/Config/Sms.php', 'sms'
         );
 
         $this->app->singleton(Sms::class, function ($app) {
