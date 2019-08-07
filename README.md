@@ -55,6 +55,14 @@ providers' => [
 ],
 ``
 
+### For Lumen
+Open `bootstrap/app.php` add these lines to Service Providers section.
+
+```
+$app->register(\yedincisenol\Sms\LaravelServiceProvider::class);
+```
+
+If you need `config_path` helper, [this](https://gist.github.com/mabasic/21d13eab12462e596120) can help you.
 
 ## Add new Providers
 
