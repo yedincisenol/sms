@@ -29,7 +29,7 @@ class Iletimerkezi extends Sms
                     'password'   => $this->config['password'],
                     'username'   => $this->config['username'],
                     'sender'     => $header,
-                    'text'       => urlencode($message),
+                    'text'       => $message,
                 ], ]);
         } catch (\Exception $e) {
              $this->checkResponse($e->getResponse());
