@@ -10,6 +10,12 @@ abstract class Sms
     protected $httpClient;
     protected $requiredConfig;
 
+    /**
+     * Sms constructor.
+     * @param $driver
+     * @param $config
+     * @throws DriverConfigurationException
+     */
     public function __construct($driver, $config)
     {
         $this->httpClient = new \GuzzleHttp\Client();
@@ -33,7 +39,7 @@ abstract class Sms
     {
         foreach ($this->requiredConfig as $required) {
             if (!array_key_exists($required, $this->config)) {
-                throw new DriverConfigurationException($required.' config required for driver:'.get_class($this), 402);
+                throw new DriverConfigurationException($required.' config required for driver:' . get_class($this), 402);
             }
         }
     }
