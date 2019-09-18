@@ -6,7 +6,6 @@ use yedincisenol\Sms\Exceptions\DriverSmsSendFailException;
 
 class Iletimerkezi extends Sms
 {
-
     protected $requiredConfig = ['username', 'password'];
 
     /**
@@ -14,8 +13,9 @@ class Iletimerkezi extends Sms
      * @param $numbers
      * @param $header
      *
-     * @return mixed
      * @throws DriverSmsSendFailException
+     *
+     * @return mixed
      */
     public function send($message, $numbers, $header)
     {
@@ -25,11 +25,11 @@ class Iletimerkezi extends Sms
             $response = $this->httpClient->request('GET', $this->config['request_endpoint'], [
                 'query'   => [
                     'receipents' => implode(',', $numbers),
-                    'password' => $this->config['password'],
-                    'username' => $this->config['username'],
-                    'sender' => $header,
-                    'text' => urlencode($message),
-                ]]);
+                    'password'   => $this->config['password'],
+                    'username'   => $this->config['username'],
+                    'sender'     => $header,
+                    'text'       => urlencode($message),
+                ], ]);
         } catch (\Exception $e) {
             throw new DriverSmsSendFailException($e->getMessage(), $e->getCode());
         }
@@ -37,6 +37,5 @@ class Iletimerkezi extends Sms
 
     protected function checkResponse($response)
     {
-        return;
     }
 }
