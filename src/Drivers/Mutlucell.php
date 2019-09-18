@@ -13,9 +13,10 @@ class Mutlucell extends Sms
      * @param $numbers
      * @param $header
      *
-     * @return mixed
      * @throws DriverSmsSendFailException
      * @throws \GuzzleHttp\Exception\GuzzleException
+     *
+     * @return mixed
      */
     public function send($message, $numbers, $header)
     {
