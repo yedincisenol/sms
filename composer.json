@@ -27,5 +27,8 @@
                 "yedincisenol\\Sms\\LaravelServiceProvider"
             ]
         }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.5"
     }
 }
