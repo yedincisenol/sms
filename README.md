@@ -10,6 +10,8 @@ Send Sms With Php & Laravel and Any sms provider
 ## Added Providers For Now
 - Eflatun Sms
 - Mutlucell
+- Iletimerkezi
+- Verimor
 
 ## Example Usage
 

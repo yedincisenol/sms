@@ -15,4 +15,9 @@ return [
         'username'         => 'username',
         'password'         => 'password',
     ],
+    'Verimor' => [
+        'request_endpoint' => 'http://sms.verimor.com.tr/v2/send.json',
+        'username' => 'username',
+        'password' => 'password'
+    ]
 ];

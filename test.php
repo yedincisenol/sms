@@ -23,3 +23,10 @@ $smsProvider = new yedincisenol\Sms\Sms('EflatunSms', [
  */
 $iletimerkezi = new yedincisenol\Sms\Sms('Iletimerkezi', []);
 //$iletimerkezi->send('Selam', ['05459196661'], 'HEADER');
+
+$verimor = new \yedincisenol\Sms\Sms('Verimor', [
+    'username' => 'username',
+    'password' => 'password'
+]);
+
+$verimor->send('Selam', ['00905459196661'], 'HEADER');

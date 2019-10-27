@@ -39,9 +39,9 @@ class Sms
     }
 
     /**
-     * @param $message Message
-     * @param $numbers Numbers Array
-     * @param $header SMS HEADER
+     * @param $message string
+     * @param $numbers array
+     * @param $header string  SMS HEADER
      */
     public function send($message, $numbers, $header)
     {
