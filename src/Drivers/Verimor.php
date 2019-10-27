@@ -3,8 +3,6 @@
 namespace yedincisenol\Sms\Drivers;
 
 use GuzzleHttp\Exception\RequestException;
-use http\Client\Response;
-use Psr\Http\Message\ResponseInterface;
 use yedincisenol\Sms\Exceptions\DriverConfigurationException;
 
 class Verimor extends Sms
@@ -13,7 +11,7 @@ class Verimor extends Sms
      * @var array Required config fields
      */
     protected $requiredConfig = [
-        'username', 'password'
+        'username', 'password',
     ];
 
     /**
@@ -21,26 +19,28 @@ class Verimor extends Sms
      * @param $numbers
      * @param $header
      *
-     * @return void
      * @throws \yedincisenol\Sms\Exceptions\DriverConfigurationException
      * @throws \GuzzleHttp\Exception\GuzzleException
+     *
+     * @return void
      */
     public function send($message, $numbers, $header)
     {
         $this->validateConfig();
+
         try {
             $this->httpClient->request('POST', $this->config['request_endpoint'], [
                 'json' => [
-                    'username' => $this->config['username'],
-                    'password' => $this->config['password'],
+                    'username'    => $this->config['username'],
+                    'password'    => $this->config['password'],
                     'source_addr' => $header,
-                    'messages' => [
+                    'messages'    => [
                         [
-                            'msg' => $message,
-                            'dest' => implode(',', $numbers)
-                        ]
-                    ]
-                ]
+                            'msg'  => $message,
+                            'dest' => implode(',', $numbers),
+                        ],
+                    ],
+                ],
             ]);
         } catch (RequestException $exception) {
             $this->checkResponse($exception->getCode());
@@ -49,6 +49,7 @@ class Verimor extends Sms
 
     /**
      * @param $responseCode
+     *
      * @throws DriverConfigurationException
      */
     protected function checkResponse($responseCode)

@@ -13,10 +13,11 @@ class Iletimerkezi extends Sms
      * @param $numbers
      * @param $header
      *
-     * @return mixed
      * @throws DriverSmsSendFailException
      * @throws \GuzzleHttp\Exception\GuzzleException
      * @throws \yedincisenol\Sms\Exceptions\DriverConfigurationException
+     *
+     * @return mixed
      */
     public function send($message, $numbers, $header)
     {
@@ -32,19 +33,20 @@ class Iletimerkezi extends Sms
                     'text'       => $message,
                 ], ]);
         } catch (\Exception $e) {
-             $this->checkResponse($e->getResponse());
+            $this->checkResponse($e->getResponse());
         }
     }
 
     /**
      * @param $response
+     *
      * @throws DriverSmsSendFailException
      */
     protected function checkResponse($response)
     {
-        $xml = simplexml_load_string((string) $response->getBody(), "SimpleXMLElement", LIBXML_NOCDATA);
+        $xml = simplexml_load_string((string) $response->getBody(), 'SimpleXMLElement', LIBXML_NOCDATA);
         $json = json_encode($xml);
-        $array = json_decode($json,TRUE);
+        $array = json_decode($json, true);
 
         throw new DriverSmsSendFailException($array['status']['message'], $array['status']['code']);
     }
