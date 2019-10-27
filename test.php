@@ -26,7 +26,7 @@ $iletimerkezi = new yedincisenol\Sms\Sms('Iletimerkezi', []);
 
 $verimor = new \yedincisenol\Sms\Sms('Verimor', [
     'username' => 'username',
-    'password' => 'password'
+    'password' => 'password',
 ]);
 
 $verimor->send('Selam', ['00905459196661'], 'HEADER');
