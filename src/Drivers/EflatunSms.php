@@ -10,7 +10,7 @@ class EflatunSms extends Sms
         'username', 'password',
     ];
 
-    public function send($message, $numbers, $header)
+    public function send($message, $numbers, $header, $valid_for = '24:00')
     {
         $response = $this->httpClient->request('GET', $this->config['request_endpoint'], [
             'query'   => [

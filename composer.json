@@ -1,15 +1,9 @@
 {
-    "name": "yedincisenol/sms",
+    "name": "mukellef/mukellef-sms",
     "description": "Send sms with Php",
     "type": "library",
     "license": "MIT",
-    "version": "1.4.0",
-    "authors": [
-        {
-            "name": "Ibrahim S. Orencik",
-            "email": "o@yedincisenol.com"
-        }
-    ],
+    "version": "1.5.0",
     "require": {
         "php": ">=7.0",
         "guzzlehttp/guzzle": "^6.2",
@@ -18,13 +12,13 @@
     },
     "autoload": {
         "psr-4" : {
-            "yedincisenol\\Sms\\" : "src"
+            "Mukellef\\MukellefSms\\" : "src"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "yedincisenol\\Sms\\LaravelServiceProvider"
+                "Mukellef\\MukellefSms\\LaravelServiceProvider"
             ]
         }
     },

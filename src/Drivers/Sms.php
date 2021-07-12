@@ -32,10 +32,11 @@ abstract class Sms
      * @param $message
      * @param $numbers
      * @param $header
+     * @param $valid_for
      *
      * @return mixed
      */
-    abstract public function send($message, $numbers, $header);
+    abstract public function send($message, $numbers, $header, $valid_for);
 
     protected function validateConfig()
     {

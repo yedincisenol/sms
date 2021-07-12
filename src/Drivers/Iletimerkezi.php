@@ -19,7 +19,7 @@ class Iletimerkezi extends Sms
      *
      * @return mixed
      */
-    public function send($message, $numbers, $header)
+    public function send($message, $numbers, $header, $valid_for = '24:00')
     {
         $this->validateConfig();
 
