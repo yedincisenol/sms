@@ -18,7 +18,7 @@ class Mutlucell extends Sms
      *
      * @return mixed
      */
-    public function send($message, $numbers, $header, $valid_for = '24:00')
+    public function send($message, $numbers, $header, $valid_for)
     {
         $xml = new \SimpleXMLElement('<?xml version="1.0" encoding="utf-8"?><smspack></smspack>');
         $xml->addAttribute('ka', $this->config['username']);
