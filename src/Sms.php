@@ -43,8 +43,8 @@ class Sms
      * @param $numbers array
      * @param $header string  SMS HEADER
      */
-    public function send($message, $numbers, $header)
+    public function send($message, $numbers, $header, $valid_for='24:00')
     {
-        $this->driver->send($message, $numbers, $header);
+        $this->driver->send($message, $numbers, $header, $valid_for);
     }
 }

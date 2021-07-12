@@ -24,7 +24,7 @@ class Verimor extends Sms
      *
      * @return void
      */
-    public function send($message, $numbers, $header, $valid_for = '24:00')
+    public function send($message, $numbers, $header, $valid_for)
     {
         $this->validateConfig();
 
