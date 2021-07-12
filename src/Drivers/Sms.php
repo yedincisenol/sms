@@ -1,8 +1,8 @@
 <?php
 
-namespace yedincisenol\Sms\Drivers;
+namespace Mukellef\MukellefSms\Drivers;
 
-use yedincisenol\Sms\Exceptions\DriverConfigurationException;
+use Mukellef\MukellefSms\Exceptions\DriverConfigurationException;
 
 abstract class Sms
 {

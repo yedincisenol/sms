@@ -1,9 +1,9 @@
 <?php
 
-namespace yedincisenol\Sms\Drivers;
+namespace Mukellef\MukellefSms\Drivers;
 
 use GuzzleHttp\Exception\RequestException;
-use yedincisenol\Sms\Exceptions\DriverConfigurationException;
+use Mukellef\MukellefSms\Exceptions\DriverConfigurationException;
 
 class Verimor extends Sms
 {
@@ -19,7 +19,7 @@ class Verimor extends Sms
      * @param $numbers
      * @param $header
      *
-     * @throws \yedincisenol\Sms\Exceptions\DriverConfigurationException
+     * @throws \Mukellef\MukellefSms\Exceptions\DriverConfigurationException
      * @throws \GuzzleHttp\Exception\GuzzleException
      *
      * @return void

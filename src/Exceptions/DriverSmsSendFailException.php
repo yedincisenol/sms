@@ -1,6 +1,6 @@
 <?php
 
-namespace yedincisenol\Sms\Exceptions;
+namespace mukellef\Sms\Exceptions;
 
 class DriverSmsSendFailException extends \Exception
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace yedincisenol\Sms\Drivers;
+namespace Mukellef\MukellefSms\Drivers;
 
-use yedincisenol\Sms\Exceptions\DriverSmsSendFailException;
+use Mukellef\MukellefSms\Exceptions\DriverSmsSendFailException;
 
 class Iletimerkezi extends Sms
 {
@@ -15,7 +15,7 @@ class Iletimerkezi extends Sms
      *
      * @throws DriverSmsSendFailException
      * @throws \GuzzleHttp\Exception\GuzzleException
-     * @throws \yedincisenol\Sms\Exceptions\DriverConfigurationException
+     * @throws \Mukellef\MukellefSms\Exceptions\DriverConfigurationException
      *
      * @return mixed
      */

@@ -1,8 +1,8 @@
 <?php
 
-namespace yedincisenol\Sms\Drivers;
+namespace Mukellef\MukellefSms\Drivers;
 
-use yedincisenol\Sms\Exceptions\DriverSmsSendFailException;
+use Mukellef\MukellefSms\Exceptions\DriverSmsSendFailException;
 
 class EflatunSms extends Sms
 {
