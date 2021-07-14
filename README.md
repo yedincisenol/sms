@@ -18,7 +18,7 @@ include "vendor/autoload.php";
 /**
  * Example client for send sms with Eflatun Sms provider
  */
-$smsProvider = new Mukellef\MukellefSms\Sms("EflatunSms", array(
+$smsProvider = new Mukellef\Sms\Sms("EflatunSms", array(
     "username"  => "eflatun_sms_username",
     "password"  => "eflatun_sms_password"
 ));
@@ -30,7 +30,7 @@ echo $smsProvider->send("Selam", array(5557777777), "YENICO");
 
 ## How to install
 
-```composer require mukellef/mukellef-sms ```
+```composer require mukellef/sms ```
 
 ## Config
 
@@ -48,7 +48,7 @@ in `config/app.php`
 `` 
 providers' => [
 	...
-    Mukellef\MukellefSms\LaravelServiceProvider::class
+    Mukellef\Sms\LaravelServiceProvider::class
 ],
 ``
 
@@ -56,7 +56,7 @@ providers' => [
 Open `bootstrap/app.php` add these lines to Service Providers section.
 
 ```
-$app->register(\Mukellef\MukellefSms\LaravelServiceProvider::class);
+$app->register(\Mukellef\Sms\LaravelServiceProvider::class);
 ```
 
 If you need `config_path` helper, [this](https://gist.github.com/mabasic/21d13eab12462e596120) can help you.

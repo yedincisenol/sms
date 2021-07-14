@@ -1,6 +1,6 @@
 <?php
 
-namespace Mukellef\MukellefSms;
+namespace Mukellef\Sms;
 
 use Illuminate\Support\ServiceProvider;
 

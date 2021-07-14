@@ -1,6 +1,6 @@
 <?php
 
-namespace Mukellef\MukellefSms\Exceptions;
+namespace Mukellef\Sms\Exceptions;
 
 use Exception;
 

@@ -1,8 +1,8 @@
 <?php
 
-namespace Mukellef\MukellefSms\Drivers;
+namespace Mukellef\Sms\Drivers;
 
-use Mukellef\MukellefSms\Exceptions\DriverSmsSendFailException;
+use Mukellef\Sms\Exceptions\DriverSmsSendFailException;
 
 class Mutlucell extends Sms
 {

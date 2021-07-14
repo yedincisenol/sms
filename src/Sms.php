@@ -1,9 +1,9 @@
 <?php
 
-namespace Mukellef\MukellefSms;
+namespace Mukellef\Sms;
 
-use Mukellef\MukellefSms\Exceptions\DriverConfigurationException;
-use Mukellef\MukellefSms\Exceptions\DriverNotFoundException;
+use Mukellef\Sms\Exceptions\DriverConfigurationException;
+use Mukellef\Sms\Exceptions\DriverNotFoundException;
 
 class Sms
 {
@@ -29,7 +29,7 @@ class Sms
     public function driver($driver, $config)
     {
         try {
-            $driverClass = "\\Mukellef\\MukellefSms\\Drivers\\{$driver}";
+            $driverClass = "\\Mukellef\\Sms\\Drivers\\{$driver}";
             $this->driver = new $driverClass($driver, $config);
         } catch (DriverConfigurationException $e) {
             throw new DriverConfigurationException($e->getMessage());
