@@ -20,6 +20,7 @@ class Mutlucell extends Sms
      */
     public function send($message, $numbers, $header)
     {
+        $message = preg_replace('/[^A-Za-z0-9-üÜçÇşŞğĞöÖ \-]/', '', $message);
         $xml = new \SimpleXMLElement('<?xml version="1.0" encoding="utf-8"?><smspack></smspack>');
         $xml->addAttribute('ka', $this->config['username']);
         $xml->addAttribute('pwd', $this->config['password']);
