@@ -3,7 +3,7 @@
     "description": "Send sms with Php",
     "type": "library",
     "license": "MIT",
-    "version": "1.4.5",
+    "version": "1.4.6",
     "authors": [
         {
             "name": "Ibrahim S. Orencik",
