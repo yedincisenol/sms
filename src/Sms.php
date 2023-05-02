@@ -32,9 +32,9 @@ class Sms
             $driverClass = "\\Mukellef\\Sms\\Drivers\\{$driver}";
             $this->driver = new $driverClass($driver, $config);
         } catch (DriverConfigurationException $e) {
-            throw new DriverConfigurationException($e->getMessage());
+            throw new DriverConfigurationException($e);
         } catch (DriverNotFoundException $e) {
-            throw new DriverConfigurationException('Driver not found: '.$driver);
+            throw new DriverConfigurationException($e);
         }
     }
 
