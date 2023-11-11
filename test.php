@@ -5,8 +5,11 @@ include 'vendor/autoload.php';
 /**
  * Example request for Mutlucell.
  */
-$mutluCell = new yedincisenol\Sms\Sms('Mutlucell', []);
-//$mutluCell->send('Selam', ['05459196661'], 'prstent.com');
+$mutluCell = new yedincisenol\Sms\Sms('Mutlucell', [
+    'username'  => 'test',
+    'password'  => 'test',
+]);
+$mutluCell->send('Selam', ['05300000000'], 'yengec');
 
 /**
  * Example client for send sms with Eflatun Sms provider.
@@ -29,4 +32,4 @@ $verimor = new \yedincisenol\Sms\Sms('Verimor', [
     'password' => 'password',
 ]);
 
-$verimor->send('Selam', ['00905459196661'], 'HEADER');
+//$verimor->send('Selam', ['00905459196661'], 'HEADER');

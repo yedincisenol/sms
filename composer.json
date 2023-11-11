@@ -3,7 +3,7 @@
     "description": "Send sms with Php",
     "type": "library",
     "license": "MIT",
-    "version": "1.4.5",
+    "version": "1.5.0",
     "authors": [
         {
             "name": "Ibrahim S. Orencik",
@@ -11,8 +11,8 @@
         }
     ],
     "require": {
-        "php": ">=7.0",
-        "guzzlehttp/guzzle": "^6.2",
+        "php": ">=7.2.5",
+        "guzzlehttp/guzzle": "^7.8.0",
         "ext-simplexml": "*",
         "ext-json": "*"
     },
@@ -29,6 +29,6 @@
         }
     },
     "require-dev": {
-        "phpunit/phpunit": "^6.5.14"
+        "phpunit/phpunit": "^8.5.34"
     }
 }
