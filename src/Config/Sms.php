@@ -20,4 +20,9 @@ return [
         'username'         => 'username',
         'password'         => 'password',
     ],
+    'Twilio' => [
+        'account_sid' => '',
+        'auth_token'  => '',
+        'from_number' => '',
+    ],
 ];
